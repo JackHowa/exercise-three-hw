@@ -32,6 +32,7 @@ function loopThroughData(s) {
 		var schoolName = s[i]["SCHOOL_NAME"];
 		var year = s[i]["YEAR"];
 		var gradPct = s[i]["GRADUATES_PCT"];
+		// var gradPctBlack = s[i]["GRADUATES_BLACK_PCT"];
 
 		//If graduation percent is less thatn 50%...
 		//We use the `<` operator to test for values less than 50%
@@ -39,10 +40,11 @@ function loopThroughData(s) {
 		//Which is that the value must also be greater than 0.
 		// if (gradPct < 60 && gradPct > 0) {
 		// 	//...Do this.
-		// 	console.log(year, schoolName, gradPct);
+			console.log(year, schoolName, gradPct);
 		// }
 
 		var barWidth = gradPct * 10;
+		// var barWidth = gradPctBlack * 10;
 
 		if (schoolName === "FREDERICK DOUGLASS HIGH") {
 			$(".chart").append(
